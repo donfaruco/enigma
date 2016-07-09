@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+#Written by FAA.  This is the famous Enigma Program
+
+import sys
+
+formula = {"a": 7, "b": 5, "c": 2, "d": 1, "e": 9, "f": 6, "g": 3, "h": 8, "i": 4,
+          "j": 3, "k": 9, "l": 6, "m": 4, "n": 2, "o": 1, "p": 8, "q": 7, "r": 1,
+		  "s": 7, "t": 5, "u": 2, "v": 6, "w": 7, "x": 9, "y": 8, "z": 3}
+	  
+
+print "Must contain only alphabet letters, No numbers or special characters! \n\n"
+
+userid = raw_input("Type userid: " ).lower()
+#userid = sys.argv[1].lower()
+
+quad = userid[0:4] # Truncates the userid to the first 4 characters and sets as variable quad
+
+for i in quad:
+    print formula.get(i), 
+
+pause = input("\n\nPRESS ENTER TO FINISH")
